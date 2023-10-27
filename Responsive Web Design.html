@@ -4,6 +4,7 @@
 <!--  -->
 <img src="" alt="">
 <a href=""></a>
+<main></main>
 <section></section>
 <ul></ul>
 <li></li>
@@ -17,10 +18,46 @@
 <strong></strong>
 <form action=""></form>
 <!-- placeholderは、入力欄にどのような情報を入力すべきかのヒントをユーザーに与えるため -->
-<input type="text" name="" placeholder="">
+<!-- requiredは、必須の情報が不足している場合にユーザーがフォームを送信できないようにするため -->
+<input type="text" name="" placeholder="" required>
+<button type="button"></button>
+<!-- 両方のボタンが同じ値の name 属性を持つ必要 -->
+<!-- ボタンの name 属性と value 属性に基づいたデータに -->
+<input type="radio" id="" name="" value="">
+<!-- 単語をクリックした場合でも対応するラジオボタンが選択されるように -->
+<label><input type="radio" id="" name="" value=""></label>
+<!-- ウェブフォーム内の関連する入力欄とラベルをグループ化するため -->
+<fieldset></fieldset>
+<!-- fieldset 要素内のコンテンツに関する説明文として機能 -->
+<legend></legend>
+<input type="checkbox" id="" name="" value="">
+<!-- テキストを label 要素にネストして、input 要素の id 属性と同じ値を持つ for 属性を追加する -->
+<input id="" type="checkbox" value=""><label for=""></label>
+<!-- チェックボックス、あるいはラジオボタンをデフォルトで選択状態にする -->
+<input type="checkbox" checked>
+<footer></footer>
+<!-- ページ上に表示されるべきコンテンツの要素は、すべて body 要素の中 -->
+<body></body>
+<!-- その他の重要な情報を head 要素に -->
+<head></head>
+<title></title>
+<html lang=""></html>
+<!DOCTYPE html>
+<!-- ブラウザーのふるまいを設定 -->
+<meta charset="UTF-8">
 
 
-<html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+  </head>
   <body>
     <main>
       <h1></h1>
@@ -55,9 +92,24 @@
       <section>
         <h2></h2>
         <form action="">
-          <input type="text" name="" placeholder="">
+          <fieldset>
+            <legend></legend>
+            <label><input id="" type="radio" name="" value="" checked></label>
+            <label><input id="" radio" name="" value=""></label>
+            <input type="text" name="" placeholder="" required>
+            <button type="submit"></button>
+          </fieldset>
+          <fieldset>
+            <legend></legend>
+            <input id="" type="checkbox" name="" value="" checked><label for=""></label>
+            <input id="" type="checkbox" name="" value=""><label for=""></label>
+            <input id="" type="checkbox" name="" value=""><label for=""></label>
+          </fieldset>
         </form>
       </section>
     </main>
+    <footer>
+      <p><a href=""></a></p>
+    </footer>
   </body>
 </html>
