@@ -1,0 +1,14 @@
+body {
+  width: 100%;
+  /* vh という単位はビューポートの高さ (viewport height) を表し、ビューポートの height の 1% に相当 */
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+}
+
+label {
+  display: block;
+  /* <!-- rem という単位は「root (ルート要素) の em」を表し、html 要素のフォントサイズに比例 --> */
+  margin: 0.5rem 0;
+}
