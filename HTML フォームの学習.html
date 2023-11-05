@@ -7,6 +7,22 @@ password タイプは入力内容を隠し、また、サイトが HTTPS を使�
 <input type="password">
 <!-- type が submit に設定された最初の input 要素は、自動的に、一番近い親要素の form を送信 -->
 <input type="submit" value="">
+<!-- 須のフィールドを記入せずにフォームを送信しようとするとエラーメッセージが表示 -->
+<input type="text" required>
+<input type="password" minlength="">
+<input type="password" pattern="">
+<input type="radio" checked>
+<!-- プロフィール画像をアップロード -->
+<input type="file">
+<input type="number" min="" max="">
+<!-- select 要素はひとまとまりの option 要素を入れるコンテナーであり、option 要素が、ドロップダウン内の各選択肢のラベルとして機能<select></select> -->
+<select>
+  <option></option>
+</select>  
+<!-- 複数行のテキストと、行数と列数の初期値を受け取ることができるという利点 -->
+<textarea cols="30" rows="10"></textarea>
+<textarea placeholder=""></textarea>
+
 
 
 <!DOCTYPE html>
@@ -22,13 +38,36 @@ password タイプは入力内容を隠し、また、サイトが HTTPS を使�
   <p>Please fill out this form with the required information</p>
   <form action="" method="post">
     <fieldset>
-      <label for="first-name">Enter Your First Name: <input id="first-name" type="text" /></label>
-      <label for="last-name">Enter Your Last Name: <input id="last-name" type="text" /></label>
-      <label for="email">Enter Your Email: <input id="email" type="email" /></label>
-      <label for="new-password">Create a New Password: <input id="new-password" type="password" /></label>
+      <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+      <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+      <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+      <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
     </fieldset>
-    <fieldset></fieldset>
-    <fieldset></fieldset>
+    <fieldset>
+      <legend>Account type (required)</legend>
+      <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+      <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+    </fieldset>
+    <fieldset>
+      <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+      <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+      <label for="referrer">How did you hear about us?
+        <select id="referrer" name="referrer">
+          <option value="">(select one)</option>
+          <option value="1">freeCodeCamp News</option>
+          <option value="2">freeCodeCamp YouTube Channel</option>
+          <option value="3">freeCodeCamp Forum</option>
+          <option value="4">Other</option>
+        </select>
+      </label>
+      <label for="bio">Provide a bio:
+        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+      </label>
+    </fieldset>
+
+    <label for="terms-and-conditions">
+      <input class="inline" id="terms-and-conditions" type="checkbox" required /> I accept the <a href="">terms and conditions</a>
+    </label>
     <input type="submit" value="Submit">
   </form>
 </body>
